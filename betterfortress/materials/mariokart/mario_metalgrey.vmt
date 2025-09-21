@@ -1,8 +1,0 @@
-"lightmappedGeneric"
-{
-	"$baseTexture" "mariokart/mario_metalgrey"
-	"$surfaceprop" "metal"
-      	"%keywords" "mario"
-	"$envmap" "env_cubemap"
-	"$envmaptint"			"[.08 .08 .08]"
-}

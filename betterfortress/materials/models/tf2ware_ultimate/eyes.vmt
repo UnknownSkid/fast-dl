@@ -1,5 +1,0 @@
-VertexLitGeneric
-{
-	$basetexture models/tf2ware_ultimate/eyes
-	$alphatest 1
-}

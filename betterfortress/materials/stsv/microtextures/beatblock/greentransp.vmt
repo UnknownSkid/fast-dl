@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "stsv/microtextures/beatblock/greentransp"
-	"$surfaceprop" "Concrete_Block"
-	"$alphatest" 1
-}
