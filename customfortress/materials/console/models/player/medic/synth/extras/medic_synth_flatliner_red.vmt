@@ -1,0 +1,52 @@
+UnlitTwoTexture
+{
+	$basetexture "console/models/player/medic/synth/extras/medic_synth_holocol_w"
+	$texture2 "models/workshop/player/items/medic/sum20_flatliner/sum20_flatliner_color"
+
+	$additive 1
+
+	$rimlight 1
+
+	$color2 "[0.89 0.35 0.35]"
+	$blendtintbybasealpha 1
+
+	$blendtintcoloroverbase 0
+	$cloakpassenabled 1
+	$colortint_base "{ 226 90 90 }"
+	$colortint_tmp "[0 0 0]"
+	$rimmask 1
+
+	Proxies
+	{
+		invis
+		{
+		}
+
+		TextureScroll
+		{
+			texturescrollvar "$texture2transform"
+			texturescrollrate 6
+			texturescrollangle 0
+		}
+
+		Sine
+		{
+			Sineperiod .05
+			SineMax 1
+			SineMin .8
+			resultVar "$color"
+		}
+
+		SelectFirstIfNonZero
+		{
+			srcVar1 "$colortint_tmp"
+			srcVar2 "$colortint_base"
+			resultVar "$color2"
+		}
+
+		ItemTintColor
+		{
+			resultVar "$colortint_tmp"
+		}
+	}
+}
