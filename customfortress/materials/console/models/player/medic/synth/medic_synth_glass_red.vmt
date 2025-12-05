@@ -1,0 +1,63 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"console/models/player/medic/synth/medic_synth_glass_red"
+	"$surfaceprop"	"glass"
+	"$envmaptint" "[3 3 3]"
+	"$envmapfresnel" 1
+	"$envMapFresnelMinMaxExp" "[2 1 4]"
+	"$baseAlphaEnvMapMaskMinMaxExp" "[0 1 1]"
+	"$translucent"	1
+
+	//phong properties
+	"$phong"	"1"
+	"$phongboost"	"5"
+	"$phongexponent"	"30"
+	"$phongfresnelranges"	"[.2 1 4]"
+	
+	"$rimlight" 1
+	"$rimboost" 8
+	
+
+	"$glowcolor" "1"
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 		"cubemaps\cubemap_sheen001"
+	"$sheenmapmask" 		"Effects\AnimatedSheen\animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 		"0"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
